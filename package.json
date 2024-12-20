@@ -1,19 +1,22 @@
 {
   "name": "n8n-nodes-qonto-antislash",
   "version": "1.1.3",
-  "description": "Qonto is a neo-bank. This node give access to all functions of this bank",
+  "description": "Qonto is a neo-bank. This node gives access to all functions of this bank",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package",
+    "n8n",
+    "qonto",
+    "integration"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/DtNeo/n8n-qonto-node#readme",
   "author": {
     "name": "Antislash",
     "email": "trystan@antislash.studio"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DtNeo/n8n-qonto-node.git"
+    "url": "git+https://github.com/DtNeo/n8n-qonto-node.git"
   },
   "main": "index.js",
   "scripts": {
@@ -27,6 +30,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
