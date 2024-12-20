@@ -1,27 +1,51 @@
 {
-  "name": "@antislash/n8n-nodes-qonto-antislash",
-  "version": "0.1.0-alpha", 
-  "description": "Qonto is a neo-bank. This node gives access to all functions of this bank",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
-  "scripts": {
-    "build": "tsc && gulp build:icons",
-    "prepublishOnly": "npm run build"
-  },
-  "files": ["dist"],
-  "keywords": ["n8n", "qonto", "node-package"],
+  "name": "n8n-nodes-qonto-antislash",
+  "version": "0.1.0",
+  "description": "Qonto is a neo-bank. This node gives access to all functions of this bank.",
+  "keywords": [
+    "n8n",
+    "qonto",
+    "neo-bank",
+    "integration",
+    "automation"
+  ],
+  "license": "MIT",
   "author": {
     "name": "Antislash",
     "email": "trystan@antislash.studio"
   },
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antislash/n8n-qonto-node.git"
   },
+  "homepage": "https://github.com/antislash/n8n-qonto-node#readme",
+  "bugs": {
+    "url": "https://github.com/antislash/n8n-qonto-node/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "lint": "eslint nodes credentials package.json",
+    "prepublishOnly": "npm run build && npm run lint",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "n8n-core": "^0.125.0",
+    "n8n-workflow": "^0.107.0"
+  },
   "devDependencies": {
     "typescript": "~4.6.0",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.0.0",
+    "prettier": "^2.7.1",
+    "tslint": "^6.1.2"
   }
 }
